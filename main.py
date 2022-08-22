@@ -26,7 +26,7 @@ def run_auto_updater():
 
     for program in programs:
         git_output = subprocess.run([
-                'git', 'pull', '-C', program['abs_path']
+                'git', '-C', program['abs_path'], 'pull'
             ], capture_output=True, encoding='utf-8'
         )
 
