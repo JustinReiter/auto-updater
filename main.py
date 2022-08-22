@@ -1,11 +1,14 @@
-from distutils.command.config import config
 import subprocess
 import json
 from os.path import exists
 import argparse
+from datetime import datetime
 
 def log_message(message: str):
-    pass
+    time_str = "[" + datetime.now().isoformat() + "] Auto-Updater: "
+    print(time_str + message)
+    with open("./logs/{}.txt".format(datetime.now().isoformat()[:10]), 'a') as log_writer:
+        log_writer.write(time_str + message + "\n")
 
 
 def run_auto_updater():
