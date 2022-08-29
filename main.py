@@ -31,7 +31,7 @@ def run_auto_updater():
         )
 
         if 'Already up to date.' not in git_output.stdout:
-            log_message('Found & applies changes for {}'.format(program['name']))
+            log_message('Found & applied changes for {}'.format(program['name']))
             if 'run_script' in program:
                 rs_output = subprocess.run([program['run_script']], capture_output=True, encoding='utf-8')
                 if rs_output.returncode == 0:
