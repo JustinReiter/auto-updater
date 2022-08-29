@@ -19,6 +19,13 @@ To run the auto-updater, run the following:
 python main.py -run
 ```
 
+### Cron
+
+A sample cronjob to use with this project is to run the updates every 5 min:
+```bash
+*/5 * * * * cd /home/pi/Desktop/auto-updater/ && python3 main.py -ru
+```
+
 ## Notes
 
 If a `run-script` is provided, then the auto-updater will run the script after updating the project.
