@@ -23,7 +23,7 @@ python main.py -run
 
 A sample cronjob to use with this project is to run the updates every 5 min:
 ```bash
-*/5 * * * * cd /home/pi/Desktop/auto-updater/ && python3 main.py -ru
+*/5 * * * * cd /home/pi/Desktop/auto-updater/ && python3 main.py -run
 ```
 
 ## Notes
